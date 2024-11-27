@@ -37,7 +37,7 @@ void createLL(LinkNodePtr& h) {
         h_insert(h, nom, num);
     }
     //If no nodes were added, print the empty list message
-    if (n == NULL) {
+    if (h == NULL) {
         cout << "This list is empty." << endl;
     }
 }
@@ -56,11 +56,11 @@ void printLL(LinkNodePtr h) {
     //Go through the list and print each note 
     cout << "Printing this list: " << endl;
     while (current != NULL) {
-        cout << "Node #" << nodeCount << ": " << (*current).name << ", " << (*current.number)) << endl;
+        cout << "Node #" << nodeCount << ": " << (*current).name << ", " << (*current).number << endl;
         current = (*current).link;
         nodeCount++;
     }
-    cout "--------" << endl;
+    cout << "--------" << endl;
 }
 
 void insertNodeAfter(LinkNodePtr h) {
