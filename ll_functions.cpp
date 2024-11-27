@@ -44,7 +44,7 @@ void createLL(LinkNodePtr& h) {
 
 
 
-void printLL(LinkNodePtr& h) {
+void printLL(LinkNodePtr h) {
     //Check if list is empty
     if (h == NULL) {
         cout << "The list is empty." << endl;
@@ -63,7 +63,7 @@ void printLL(LinkNodePtr& h) {
     cout << "--------" << endl;
 }
 
-void insertNodeAfter(LinkNodePtr h) {
+void insertNodeAfter(LinkNodePtr& h) {
     //Check if the list is empty
     if (h == NULL) {
         cout << "Cannot insert in a non-existing link." << endl;
