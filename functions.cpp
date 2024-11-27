@@ -54,30 +54,24 @@ void InitializeStructures(UndergradStudents us[], int &size) {
         student.firstName = firstName;
         
         // Get last name
-        cout << "Student " << setw(2) << setfill('0') << studentNum 
-             << ":Enter last name: ";
+        cout << "Student " << studentNum << ":Enter last name: ";
         cin >> student.lastName;
         
         // Get major
-        cout << "Student " << setw(2) << setfill('0') << studentNum 
-             << ":Enter major: ";
+        cout << "Student " << studentNum << ":Enter major: ";
         cin >> student.major;
         
         // Get GPAs for 4 years
-        cout << "Student " << setw(2) << setfill('0') << studentNum 
-             << ":Enter GPA Year 1: ";
+        cout << "Student " << studentNum << ":Enter GPA Year 1: ";
         cin >> student.yearOneGPA;
         
-        cout << "Student " << setw(2) << setfill('0') << studentNum 
-             << ":Enter GPA Year 2: ";
+        cout << "Student " << studentNum  << ":Enter GPA Year 2: ";
         cin >> student.yearTwoGPA;
         
-        cout << "Student " << setw(2) << setfill('0') << studentNum 
-             << ":Enter GPA Year 3: ";
+        cout << "Student " << studentNum << ":Enter GPA Year 3: ";
         cin >> student.yearThreeGPA;
         
-        cout << "Student " << setw(2) << setfill('0') << studentNum 
-             << ":Enter GPA Year 4: ";
+        cout << "Student " << studentNum << ":Enter GPA Year 4: ";
         cin >> student.yearFourGPA;
         
         // Increment size
@@ -89,28 +83,21 @@ void WriteResults(ofstream &outf, UndergradStudents us[], int size) {
     // Sort the array first
     NameSort(us, size);
     
-    // Open the output file
-    outf.open(OUTPUTFILE);
-    
     // Write header
     outf << "These are the results sorted by last name:\n";
     
     // Write each student's information
     for (int i = 0; i < size; i++) {
         // Calculate average GPA
-        float avgGPA = (us[i].yearOneGPA + us[i].yearTwoGPA + 
-                        us[i].yearThreeGPA + us[i].yearFourGPA) / 4.0;
+        float avgGPA = (us[i].yearOneGPA + us[i].yearTwoGPA + us[i].yearThreeGPA + us[i].yearFourGPA) / 4.0;
         
         // Write to file with specific formatting
-        outf << "ID# " << i+1 << ": " 
+        outf << "ID# " << us[i].studentID << ": " 
              << us[i].lastName << ": " 
              << us[i].firstName << ": " 
              << us[i].major << ": " 
              << fixed << setprecision(2) << avgGPA << endl;
     }
-    
-    // Close the file
-    outf.close();
 }
 
 
