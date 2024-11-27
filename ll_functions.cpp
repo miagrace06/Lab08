@@ -30,7 +30,7 @@ void createLL(LinkNodePtr& h) {
         cin >> nom >> num;
 
         //Check for quit condition
-        if (nom == '0' && num == 0) {
+        if (nom == "0" && num == 0) {
             break;
     }
         //Call h_insert to add the node to the front of the list
@@ -93,7 +93,7 @@ void insertNodeAfter(LinkNodePtr& h) {
     //Get new node data
     string nom;
     int num;
-    cout << "Enter data (name, then number: ";
+    cout << "Enter data (name, then number): ";
     cin >> nom >> num;
 
     //Find the node at the specified position
