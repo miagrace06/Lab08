@@ -1,5 +1,6 @@
 // file: functions.cpp
-// YOUR NAME HERE
+// Name: Mia Campanella
 // Define the functions, per the list in headers.h
+
 
 
