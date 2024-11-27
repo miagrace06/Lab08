@@ -44,7 +44,7 @@ void createLL(LinkNodePtr& h) {
 
 
 
-void printLL(LinkNodePtr h) {
+void printLL(LinkNodePtr& h) {
     //Check if list is empty
     if (h == NULL) {
         cout << "The list is empty." << endl;
