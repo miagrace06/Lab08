@@ -32,7 +32,7 @@ void createLL(LinkNodePtr& h) {
         //Check for quit condition
         if (nom == "0" && num == 0) {
             break;
-    }
+        }
         //Call h_insert to add the node to the front of the list
         h_insert(h, nom, num);
     }
